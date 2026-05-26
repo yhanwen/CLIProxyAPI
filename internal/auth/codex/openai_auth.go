@@ -28,6 +28,8 @@ const (
 	RedirectURI = "http://localhost:1455/auth/callback"
 )
 
+var codexRefreshGroup singleflight.Group
+
 // CodexAuth handles the OpenAI OAuth2 authentication flow.
 // It manages the HTTP client and provides methods for generating authorization URLs,
 // exchanging authorization codes for tokens, and refreshing access tokens.
